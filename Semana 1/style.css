@@ -1,0 +1,9 @@
+.navlink {
+  transition-duration: 0.4s;
+}
+
+.navlink:hover, .navlink:active {
+  background-color: #200C00;
+  color: white;
+}
+
