@@ -7,7 +7,6 @@
     text-decoration: none;
     display: inline-block;
     transition-duration: 0.4s;
-    font-family: Times New Roman, sans-serif;
 }
 
 .navlink:hover {
@@ -20,4 +19,38 @@
     background-color: #422600;
     color: #ffffff;
     border-color: #422600;
+}
+
+header {
+  background-color: #fdfbd4;
+  padding: 30px;
+  text-align: center;
+  font-size: 20px;
+  color: #422600;
+}
+
+html{
+    font-family: arial, helvetica, sans-serif;
+}
+
+title{
+    background-color: #422600;
+    color: white;
+}
+h1 {
+    color: #422600;
+}
+h2 {
+    color: #422600;
+}
+h3 {
+    color: #422600;
+}
+
+th{
+    color: #422600;
+}
+
+.intro{
+    text-align: center
 }
