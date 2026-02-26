@@ -1,9 +1,23 @@
 .navlink {
-  transition-duration: 0.4s;
+    background-color: #ffffff;
+    color: #422600;
+    border: 1px solid #cccccc;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition-duration: 0.4s;
+    font-family: Times New Roman, sans-serif;
 }
 
-.navlink:hover, .navlink:active {
-  background-color: #200C00;
-  color: white;
+.navlink:hover {
+    background-color: #422600;
+    color: #ffffff;
+    border-color: #422600;
 }
 
+.navlink.ativo {
+    background-color: #422600;
+    color: #ffffff;
+    border-color: #422600;
+}
