@@ -21,3 +21,18 @@
     color: #ffffff;
     border-color: #422600;
 }
+
+main section {
+    float: left;
+    padding: 20px;
+    width: 50%;
+}
+
+main aside {
+    float: right;
+    width: 45%;
+}
+
+footer {
+    clear: both;
+}
