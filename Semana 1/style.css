@@ -48,6 +48,7 @@ header {
 
 html{
     font-family: arial, helvetica, sans-serif;
+    overflow-y: scroll;
 }
 
 title{
@@ -71,3 +72,4 @@ th{
 .intro{
     text-align: center
 }
+
