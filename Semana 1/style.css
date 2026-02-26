@@ -7,6 +7,7 @@
     text-decoration: none;
     display: inline-block;
     transition-duration: 0.4s;
+    font-family: Times New Roman, sans-serif;
 }
 
 .navlink:hover {
@@ -19,6 +20,21 @@
     background-color: #422600;
     color: #ffffff;
     border-color: #422600;
+}
+
+main section {
+    float: left;
+    padding: 20px;
+    width: 50%;
+}
+
+main aside {
+    float: right;
+    width: 45%;
+}
+
+footer {
+    clear: both;
 }
 
 header {
