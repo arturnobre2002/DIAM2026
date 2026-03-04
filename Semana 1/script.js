@@ -52,3 +52,33 @@ function sucessoCompra(){
     }
 
 }
+
+let index = 0;
+const slideshowImages = ['dados/slideshow/parc.jpg', 'dados/slideshow/kendrick.jpg', 'dados/slideshow/pinkfloyd.jpg', 'dados/slideshow/themarias.jpg'];
+let slideshowTimer = setInterval(slideshowIterate, 5000);
+
+function resetTimer() {
+    clearInterval(slideshowTimer);
+    setTimeout(() => {
+        clearInterval(slideshowTimer); 
+        slideshowTimer = setInterval(slideshowIterate, 5000);
+    }, 10000); 
+}
+
+function slideshowIterate() {
+    index++;
+    if (index >= slideshowImages.length) index = 0;
+    document.getElementById("slideshow").src = slideshowImages[index];
+}
+
+function clickSlideshowRight() {
+    slideshowIterate();
+    resetTimer();
+}
+
+function clickSlideshowLeft() {
+    index--;
+    if (index < 0) index = slideshowImages.length - 1;
+    document.getElementById("slideshow").src = slideshowImages[index];
+    resetTimer();
+}

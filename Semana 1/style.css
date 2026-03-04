@@ -78,3 +78,20 @@ button{
     color: #ffffff;
     border-color: #422600;
 }
+
+.slideshow {
+    display: flex;
+    justify-content: center;
+}
+
+.controls {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.intro {
+    text-align: center;
+    display: block;
+}
