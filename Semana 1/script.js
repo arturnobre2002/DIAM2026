@@ -89,11 +89,33 @@ function verificarPalavroes(){
 
     if (temPalavrao) {
         mensagemErro.innerText = "Palavras ofensivas detetadas. Modere a linguagem.";
-        botao.disabled = true; // Desativa o botão de submeter
+        botao.disabled = true;
     } else {
-        mensagemErro.innerText = "";  // Limpa o aviso
-        botao.disabled = false; // Volta a ativar o botão
+        mensagemErro.innerText = "";
+        botao.disabled = false;
     }
 
 
 }
+
+function atualizarContador() {
+    let elemento = document.getElementById("contador");
+    const dataEvento = new Date("2026-07-13T15:00:00");
+    const dataAtual = new Date();
+
+    const dif = Math.floor((dataEvento - dataAtual) / 1000);
+
+    if (dif<0) {
+        elemento.innerText = "O Eklektikfest já começou!";
+        return;
+    }
+
+    const dias = Math.floor(dif / (60 * 60 * 24));
+    const horas = Math.floor((dif % (60 * 60 * 24)) / (60 * 60));
+    const minutos = Math.floor((dif % (60 * 60)) / 60);
+    const segundos = dif % 60;
+
+    elemento.innerText = "Faltam " + dias + " dias, " + horas + "h " + minutos + "m " + segundos + "s para o evento começar!";
+}
+
+setInterval(atualizarContador, 1000);
