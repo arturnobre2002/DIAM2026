@@ -41,6 +41,7 @@ function sucessoCompra(){
     let elemento1=document.getElementById("qt1");
     let elemento2=document.getElementById("qt2");
     let elemento3=document.getElementById("qt3");
+    let elemento4=document.getElementById("total");
     let qt1=parseInt(elemento1.innerText);
     let qt2=parseInt(elemento2.innerText);
     let qt3=parseInt(elemento3.innerText);
@@ -48,10 +49,77 @@ function sucessoCompra(){
         elemento1.innerText=0;
         elemento2.innerText=0;
         elemento3.innerText=0;
+        elemento4.innerText=0;
         elemento.innerText ="Compra realizada com sucesso!";
     }
 
 }
+
+function verificarPalavroes(){
+
+    let palavroes=["alcoviteiro",
+        "biltre",
+        "beócio",
+        "calhorda",
+        "energúmeno",
+        "janota",
+        "mentecapto",
+        "mequetrefe",
+        "mocorongo",
+        "paspalho",
+        "palerma",
+        "patife",
+        "pulha",
+        "purgante",
+        "sacripanta"];
+
+    let input = document.getElementById("comentario");
+    let mensagemErro = document.getElementById("mensagemErro");
+    let botao = document.getElementById("btnsubmit");
+
+    let texto = input.value.toLowerCase();
+    let temPalavrao = false;
+
+    for (let i=0; i<palavroes.length; i++) {
+        if (texto.includes(palavroes[i])) {
+            temPalavrao = true;
+            break;
+        }
+    }
+
+    if (temPalavrao) {
+        mensagemErro.innerText = "Palavras ofensivas detetadas. Modere a linguagem.";
+        botao.disabled = true;
+    } else {
+        mensagemErro.innerText = "";
+        botao.disabled = false;
+    }
+
+
+}
+
+function atualizarContador() {
+    let elemento = document.getElementById("contador");
+    const dataEvento = new Date("2026-07-13T15:00:00");
+    const dataAtual = new Date();
+
+    const dif = Math.floor((dataEvento - dataAtual) / 1000);
+
+    if (dif<0) {
+        elemento.innerText = "O Eklektikfest já começou!";
+        return;
+    }
+
+    const dias = Math.floor(dif / (60 * 60 * 24));
+    const horas = Math.floor((dif % (60 * 60 * 24)) / (60 * 60));
+    const minutos = Math.floor((dif % (60 * 60)) / 60);
+    const segundos = dif % 60;
+
+    elemento.innerText = "Faltam " + dias + " dias, " + horas + "h " + minutos + "m " + segundos + "s para o evento começar!";
+}
+
+setInterval(atualizarContador, 1000);
+
 
 let index = 0;
 const slideshowImages = ['dados/slideshow/parc.jpg', 'dados/slideshow/kendrick.jpg', 'dados/slideshow/pinkfloyd.jpg', 'dados/slideshow/themarias.jpg'];

@@ -46,7 +46,12 @@
             <input type="checkbox" id="apoio" name="tarefas" value="apoio">
             <label for="apoio"> Apoio ao público</label><br><br>
 
-            <input type="submit" value="Submeter">
+            Comentário sobre o evento:<br>
+            <input type="text" id="comentario" oninput="verificarPalavroes()"><br><br>
+            <b id="mensagemErro"></b><br><br>
+
+            <input type="submit" id="btnsubmit" value="Submeter">
         </form>
+        <script src="script.js"></script>
     </body>
 </html>
