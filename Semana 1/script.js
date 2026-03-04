@@ -52,3 +52,46 @@ function sucessoCompra(){
     }
 
 }
+
+function verificarPalavroes(){
+
+    let palavroes=["alcoviteiro",
+        "biltre",
+        "beócio",
+        "calhorda",
+        "energúmeno",
+        "janota",
+        "mentecapto",
+        "mequetrefe",
+        "mocorongo",
+        "paspalho",
+        "palerma",
+        "patife",
+        "pulha",
+        "purgante",
+        "sacripanta"];
+
+    let input = document.getElementById("comentario");
+    let mensagemErro = document.getElementById("mensagemErro");
+    let botao = document.getElementById("btnsubmit");
+
+    let texto = input.value.toLowerCase();
+    let temPalavrao = false;
+
+    for (let i=0; i<palavroes.length; i++) {
+        if (texto.includes(palavroes[i])) {
+            temPalavrao = true;
+            break;
+        }
+    }
+
+    if (temPalavrao) {
+        mensagemErro.innerText = "Palavras ofensivas detetadas. Modere a linguagem.";
+        botao.disabled = true; // Desativa o botão de submeter
+    } else {
+        mensagemErro.innerText = "";  // Limpa o aviso
+        botao.disabled = false; // Volta a ativar o botão
+    }
+
+
+}
