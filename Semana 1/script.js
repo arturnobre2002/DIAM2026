@@ -41,6 +41,7 @@ function sucessoCompra(){
     let elemento1=document.getElementById("qt1");
     let elemento2=document.getElementById("qt2");
     let elemento3=document.getElementById("qt3");
+    let elemento4=document.getElementById("total");
     let qt1=parseInt(elemento1.innerText);
     let qt2=parseInt(elemento2.innerText);
     let qt3=parseInt(elemento3.innerText);
@@ -48,6 +49,7 @@ function sucessoCompra(){
         elemento1.innerText=0;
         elemento2.innerText=0;
         elemento3.innerText=0;
+        elemento4.innerText=0;
         elemento.innerText ="Compra realizada com sucesso!";
     }
 
