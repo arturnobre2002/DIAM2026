@@ -17,6 +17,26 @@
             </nav>
         </header>
         <h2>Comprar Bilhetes - Eklektikfest Lisboa</h2>
-
+        <p>Bilhete de um dia - 40€
+            <button onclick="decrement('qt1')">-</button>
+            <span id="qt1">0</span>
+            <button onclick="increment('qt1')">+</button>
+        </p>
+        <p>Passe para o evento - 80€
+            <button onclick="decrement('qt2')">-</button>
+            <span id="qt2">0</span>
+            <button onclick="increment('qt2')">+</button>
+        </p>
+        <p>Passe Premium - 100€
+            <button onclick="decrement('qt3')">-</button>
+            <span id="qt3">0</span>
+            <button onclick="increment('qt3')">+</button>
+        </p>
+        <p>Total: <span id="total">0</span></p>
+        <p>
+            <span id="text1"></span>
+            <button id="btn1" onclick="sucessoCompra()">Comprar</button>
+        </p>
+        <script src="script.js"></script>
     </body>
 </html>
