@@ -40,3 +40,10 @@
 .read-the-docs {
   color: #888;
 }
+
+.slideshow {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
