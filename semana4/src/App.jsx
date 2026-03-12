@@ -1,5 +1,6 @@
 import './App.css'
 import Header from './Header.jsx'
+import Slideshow from './Slideshow.jsx'
 import Intro from './Intro.jsx'
 import Noticias from './Noticias.jsx'
 import Footer from './Footer.jsx'
@@ -11,7 +12,7 @@ function App() {
   return (
     <>
         <Header />
-        {/*slideshow*/}
+        <Slideshow />
         <Intro/>
 
       <main>
