@@ -2,7 +2,7 @@ import { Container, Button } from 'react-bootstrap'
 
 const Header = () => {
     return (
-        <header className="fixed-top" style={{ backgroundColor: "#fdfbd4"}}>
+        <header className="" style={{ backgroundColor: "#fdfbd4"}}>
             <Container className="text-center py-3">
                 <h1>EKLEKTIKFEST LISBOA</h1>
                 <nav className="d-flex justify-content-center align-items-stretch gap-3">
