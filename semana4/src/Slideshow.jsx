@@ -1,28 +1,29 @@
-import{Container, Button} from 'react-bootstrap'
-
-const Slideshow= () => {
+const Slideshow = () => {
     return(
-        <section class="slideshow">
-            <img id="slideshow" src='public/slideshow/parc.jpg' width="720px"/>
-            <button onclick={clickSlideshowLeft}>{'<'}</button>
-            <button onclick={clickSlideshowRight}>{'>'}</button>
+        <section className="text-center my-4">
+            <div className="d-inline-block">
+                <img id="slideshow" src="/slideshow/parc.jpg" className="img-fluid" style={{maxHeight: '400px', objectFit: 'cover', width: '100%'}} alt="Slideshow" />
+            </div>
+            <div className="mt-3">
+                <button onClick={clickSlideshowLeft} className="btn botao-fundo-castanho mx-2 px-4 fw-bold">{'<'}</button>
+                <button onClick={clickSlideshowRight} className="btn botao-fundo-castanho mx-2 px-4 fw-bold">{'>'}</button>
+            </div>
         </section>
     );
-    }
+}
 
 export default Slideshow;
 
-
 let index = 0;
-const slideshowImages = ['public/slideshow/parc.jpg', 'public/slideshow/kendrick.jpg', 'public/slideshow/pinkfloyd.jpg', 'public/slideshow/themarias.jpg'];
+const slideshowImages = ['/slideshow/parc.jpg', '/slideshow/kendrick.jpg', '/slideshow/pinkfloyd.jpg', '/slideshow/themarias.jpg'];
 let slideshowTimer = setInterval(slideshowIterate, 5000);
 
 function resetTimer() {
     clearInterval(slideshowTimer);
     setTimeout(() => {
-        clearInterval(slideshowTimer); 
+        clearInterval(slideshowTimer);
         slideshowTimer = setInterval(slideshowIterate, 5000);
-    }, 10000); 
+    }, 10000);
 }
 
 function slideshowIterate() {
@@ -39,6 +40,6 @@ function clickSlideshowRight() {
 function clickSlideshowLeft() {
     index--;
     if (index < 0) index = slideshowImages.length - 1;
-    document.getElementById("slideshow").src = slideshowImages[index];
+    document.getElementById("slideshow").src=slideshowImages[index];
     resetTimer();
 }

@@ -8,22 +8,25 @@ import Cartaz from './Cartaz.jsx'
 import Agenda from './Agenda.jsx'
 
 function App() {
-
-  return (
-    <>
-        <Header />
-        <Slideshow />
-        <Intro/>
-
-      <main>
-          <Cartaz />
-          <Noticias />
-          <Agenda />
-      </main>
-
-      <Footer />
-    </>
-  )
+    return (
+        <>
+            <Header />
+            <main className="container my-4">
+                <Slideshow />
+                <Intro />
+                <div className="row mt-5">
+                    <div className="col-7">
+                        <Cartaz />
+                        <Agenda />
+                    </div>
+                    <aside className="col-5">
+                        <Noticias />
+                    </aside>
+                </div>
+            </main>
+            <Footer />
+        </>
+    )
 }
 
 export default App

@@ -1,80 +1,51 @@
-main section {
-    float: left;
-    padding: 20px;
-    width: 50%;
+body {
+    background-color: #f8f9fa;
 }
 
-main aside {
-    float: right;
-    width: 45%;
+h1, h2, h3, h4, h5, h6 {
+    color: #422600;
+    font-weight: bold;
 }
 
-footer {
-    clear: both;
-    text-align: center
+.fundo-amarelo {
+    background-color: #fdfbd4;
 }
 
-header {
-  background-color: #fdfbd4;
-  padding: 30px;
-  text-align: center;
-  font-size: 20px;
-  color: #422600;
-}
-
-html{
-    font-family: arial, helvetica, sans-serif;
-    overflow-y: scroll;
-}
-
-title{
+.fundo-castanho {
     background-color: #422600;
     color: white;
 }
-h1 {
-    color: #422600;
-}
-h2 {
-    color: #422600;
-}
-h3 {
-    color: #422600;
-}
 
-th{
-    color: #422600;
-}
-
-.intro{
-    text-align: center
-}
-
-button{
+.botao-fundo-castanho {
     background-color: #422600;
-    color: #ffffff;
+    color: white;
+}
+
+.botao-fundo-castanho:hover {
+    color: #422600;
     border-color: #422600;
 }
 
-.slideshow {
-    display: flex;
-    justify-content: center;
+.botao-texto-castanho {
+    color: #422600;
+    border-color: #422600;
 }
 
-.controls {
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+.botao-texto-castanho:hover {
+    background-color: #422600;
+    color: white;
 }
 
-.intro {
-    text-align: center;
-    display: block;
+.tabela-agenda th {
+    background-color: #fdfbd4;
+    color: #422600;
 }
 
-.slideshow {
-  margin-top: 10px;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+footer a {
+    color: #fdfbd4;
+    text-decoration: none;
+}
+footer a:hover {
+    color: white;
+    text-decoration: underline;
 }

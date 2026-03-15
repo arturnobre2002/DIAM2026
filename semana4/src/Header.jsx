@@ -1,23 +1,18 @@
-import { Container, Button } from 'react-bootstrap'
-
 const Header = () => {
     return (
-        <header className="" style={{ backgroundColor: "#fdfbd4"}}>
-            <Container className="text-center py-3">
-                <h1>EKLEKTIKFEST LISBOA</h1>
-                <nav className="d-flex justify-content-center align-items-stretch gap-3">
+        <header className="fundo-amarelo py-4 text-center">
+            <div className="container">
+                <h1 className="display-5 mb-3">EKLEKTIKFEST LISBOA</h1>
+                <nav className="d-flex justify-content-center align-items-center gap-3">
                     <a href="/">
-                        <img src="logo.png" alt="Logo"/> 
+                        <img src="/logo.png" alt="Logo" height="40" />
                     </a>
-                    <a href="/" className="btn h-100 py-3 btn-dark">Página Inicial</a>
-                    <span className="align-self-center">|</span>
-                    <a href="candidatura.html" className="btn h-100 py-3 btn-light">Candidatura</a>
-                    <span className="align-self-center">|</span>
-                    <a href="comprarBilhetes.html" className="btn h-100 py-3 btn-light">Comprar Bilhetes</a>
+                    <a href="/" className="btn botao-fundo-castanho">Página Inicial</a>
+                    <a href="candidatura.html" className="btn btn-outline-dark botao-texto-castanho">Candidatura</a>
+                    <a href="comprarBilhetes.html" className="btn btn-outline-dark botao-texto-castanho">Comprar Bilhetes</a>
                 </nav>
-            </Container>
+            </div>
         </header>
     )
 }
-
 export default Header;
