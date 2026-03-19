@@ -5,15 +5,10 @@ import './App.css';
 
 function App() {
   return (
-
-
       <>
           <Galeria />
           <Formulario />
       </>
-
-
-
   );
 }
 
