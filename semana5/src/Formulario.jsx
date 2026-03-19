@@ -34,10 +34,10 @@ function Inquerito() {
                 ))}
             </fieldset>
 
-            <br />
+            <br/>
 
             <button onClick={submeter}>Submeter</button>
-            <br /><br /><br />
+            <br/><br/><br/>
         </div>
     );
 }
