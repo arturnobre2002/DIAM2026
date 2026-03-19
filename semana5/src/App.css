@@ -6,3 +6,13 @@ h1, h2, h3, h4, h5, h6 {
     color: #422600;
     font-weight: bold;
 }
+
+.botao-texto-castanho {
+    color: #422600;
+    border-color: #422600;
+}
+
+.botao-texto-castanho:hover {
+    background-color: #422600;
+    color: white;
+}
