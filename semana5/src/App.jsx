@@ -1,5 +1,6 @@
 import React from 'react';
 import Galeria from './Galeria.jsx';
+import Formulario from './Formulario.jsx'
 import './App.css';
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <h1 className="">Galeria de Artistas</h1>
 
       <Galeria />
+      <Formulario />
 
     </div>
   );
