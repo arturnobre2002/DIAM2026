@@ -6,20 +6,19 @@ function Galeria() {
 
     return(
         <section className="container my-5">
-            <div className="text-center mb-5">
-                <div className="row g-4">
+            <h2 className="text-center mb-5">Galeria de Artistas</h2>
+            <div className="row g-4">
 
                 {listaArtistas.map((artista, index) => (
-                    <Entidade
-                        key={index}
-                        nome={artista.nome}
-                        img={artista.img}
-                        descricao={artista.descricao}
-                        data={artista.data}
-                    />
+                    <div key={index} className="col-12 col-md-6 col-lg-4 d-flex">
+                        <Entidade
+                          nome={artista.nome}
+                          img={artista.img}
+                          descricao={artista.descricao}
+                          data={artista.data}
+                        />
+                    </div>
                 ))}
-                </div>
-
             </div>
         </section>
     )
