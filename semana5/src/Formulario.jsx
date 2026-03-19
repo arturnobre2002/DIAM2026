@@ -37,6 +37,7 @@ function Inquerito() {
             <br />
 
             <button onClick={submeter}>Submeter</button>
+            <br /><br /><br />
         </div>
     );
 }
