@@ -5,8 +5,9 @@ function Galeria() {
     const listaArtistas = dados.entidades;
 
     return(
-        <section className=""> {/* Podes meter um "container" ou "row" aqui */}
-            <div className=""> {/* Podes meter um "d-flex", "row" ou "grid" aqui */}
+        <section className="container my-5">
+            <div className="text-center mb-5">
+                <div className="row g-4">
 
                 {listaArtistas.map((artista, index) => (
                     <Entidade
@@ -17,6 +18,7 @@ function Galeria() {
                         data={artista.data}
                     />
                 ))}
+                </div>
 
             </div>
         </section>
