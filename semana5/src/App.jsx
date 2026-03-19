@@ -7,9 +7,11 @@ function App() {
   return (
 
 
+      <>
+          <Galeria />
+          <Formulario />
+      </>
 
-      <Galeria />
-      <Formulario />
 
 
   );
