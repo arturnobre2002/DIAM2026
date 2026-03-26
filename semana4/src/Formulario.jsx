@@ -21,7 +21,7 @@ function Inquerito() {
     return (
         <div className="d-flex flex-column align-items-center my-4">
 
-            <h1>Inquérito</h1>
+            <h1 className="mb-4">Inquérito</h1>
 
             <fieldset>
                 <legend>Banda favorita:</legend>
@@ -43,7 +43,7 @@ function Inquerito() {
             <br/>
 
             <button onClick={submeter} className="btn botao-texto-castanho">Submeter</button>
-            <br/><br/>
+
         </div>
     );
 }
