@@ -1,0 +1,46 @@
+{
+  "entidades": [
+  {
+    "nome": "Dire Straits",
+    "img": "/entidades/direstraits.png",
+    "descricao": "Dire Straits was a British group formed in London, UK, in 1977. Their unique blend of Roots Rock, Blues-Rock, and Jazz, driven by Mark Knopfler's distinct finger-picking guitar style, creates beautifully melodic, sophisticated, and timeless atmospheres.",
+    "data": "15/07 às 17:00"
+  },
+  {
+    "nome": "Fontaines D.C.",
+    "img": "/entidades/fontaines.png",
+    "descricao": "Fontaines D.C. is an Irish group formed in Dublin, Ireland, in 2017. Their unique blend of Post-Punk, Indie Rock, and Alternative Rock creates poetic, raw, and viscerally intense atmospheres.",
+    "data": "14/07 às 23:00"
+
+  },
+    {
+    "nome": "Pink Floyd",
+    "img": "/entidades/pinkfloyd.png",
+    "descricao": "Pink Floyd is a British group formed in London, UK, in 1965. Their unique blend of Progressive Rock, Psychedelic Rock, and Art Rock creates cinematic, spacey, and deeply philosophical atmospheres.",
+    "data": "15/07 às 23:00"
+
+  },
+    {
+    "nome": "Placebo",
+    "img": "/entidades/placebo.png",
+    "descricao": "Placebo is a British group formed in London, UK, in 1994. Their unique blend of Alternative Rock, Glam Rock, and Post-Punk creates dark, androgynous, and emotionally raw atmospheres.",
+    "data": "15/07 às 20:00"
+
+  },
+    {
+    "nome": "Radiohead",
+    "img": "/entidades/radiohead.png",
+    "descricao": "Radiohead is a British group formed in Abingdon, UK, in 1985. Their unique blend of Alternative Rock, Art Rock, and Electronic Music creates experimental, melancholic, and boundary-pushing atmospheres.",
+    "data": "13/07 às 20:00"
+
+  },
+
+    {
+    "nome": "The Marías",
+    "img": "/entidades/themarias.png",
+    "descricao": "The Marías is an American group formed in Los Angeles, USA, in 2016. Their unique blend of Indie Pop, Psychedelic Soul, and Dream Pop creates smooth, nostalgic, and incredibly cinematic atmospheres.",
+    "data": "14/07 às 20:00"
+
+  }
+  ]
+}
