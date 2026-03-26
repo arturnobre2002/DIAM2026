@@ -1,32 +1,21 @@
 import './App.css'
-import Header from './Header.jsx'
-import Slideshow from './Slideshow.jsx'
-import Intro from './Intro.jsx'
-import Noticias from './Noticias.jsx'
-import Footer from './Footer.jsx'
-import Cartaz from './Cartaz.jsx'
-import Agenda from './Agenda.jsx'
+import { BrowserRouter, Routes, Route} from "react-router-dom";
+import GaleriaPage from "./pages/GaleriaPage.jsx";
+import InqueritoPage from "./pages/InqueritoPage.jsx";
+import HomePage from "./pages/HomePage.jsx";
+
+
 
 function App() {
-    return (
-        <>
-            <Header />
-            <main className="container my-4">
-                <Slideshow />
-                <Intro />
-                <div className="row mt-5">
-                    <div className="col-7">
-                        <Cartaz />
-                        <Agenda />
-                    </div>
-                    <aside className="col-5">
-                        <Noticias />
-                    </aside>
-                </div>
-            </main>
-            <Footer />
-        </>
-    )
+    return(
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<HomePage/>}/>
+                <Route path="/galeria" element={<GaleriaPage/>}/>
+                <Route path="/inquerito" element={<InqueritoPage/>}/>
+            </Routes>
+        </BrowserRouter>
+    );
 }
 
 export default App
