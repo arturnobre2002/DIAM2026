@@ -13,18 +13,16 @@ function ResultadosPage() {
     return (
         <>
             <Header />
-            <div className="d-flex flex-column align-items-center">
+            <div className="d-flex flex-column align-items-center my-4">
                 <h2>O teu artista favorito:</h2>
                 <h3>{escolha}</h3>
-
-                <h4>Resultados acumulados:</h4>
+                <br/>
+                <h4 className="mb-4">Resultados acumulados:</h4>
                 {bandas.map((banda) => (
                     <p key={banda}>{banda}: {votos[banda] || 0} votos</p>
                 ))}
-
-                <button className="btn btn-secondary" onClick={() => navigate("/inquerito")}>
-                    Voltar
-                </button>
+                <br/>
+                <button className="btn botao-texto-castanho" onClick={() => navigate("/inquerito")}>Voltar</button>
             </div>
             <Footer />
         </>
