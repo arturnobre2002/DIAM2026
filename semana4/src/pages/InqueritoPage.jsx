@@ -1,12 +1,12 @@
 import Header from '../Header.jsx'
 import Footer from '../Footer.jsx'
-import Formulario from '../Formulario.jsx'
+import Inquerito from '../Inquerito.jsx'
 
 function InqueritoPage() {
     return (
         <>
             <Header />
-            <Formulario/>
+            <Inquerito/>
             <Footer />
         </>
     )
