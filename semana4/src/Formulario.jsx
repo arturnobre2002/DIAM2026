@@ -43,6 +43,7 @@ function Inquerito() {
             <br/>
 
             <button onClick={submeter} className="btn botao-texto-castanho">Submeter</button>
+            <br/><br/>
         </div>
     );
 }
