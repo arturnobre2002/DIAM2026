@@ -7,9 +7,9 @@ const Header = () => {
                     <a href="/">
                         <img src="/logo.png" alt="Logo" height="40" />
                     </a>
-                    <a href="/" className="btn botao-fundo-castanho">Página Inicial</a>
+                    <a href="/" className="btn btn-outline-dark botao-texto-castanho">Página Inicial</a>
                     <a href="candidatura.html" className="btn btn-outline-dark botao-texto-castanho">Galeria</a>
-                    <a href="comprarBilhetes.html" className="btn btn-outline-dark botao-texto-castanho">Inquerito</a>
+                    <a href="comprarBilhetes.html" className="btn botao-fundo-castanho">Inquerito</a>
                 </nav>
             </div>
         </header>
