@@ -77,3 +77,41 @@ def option_detail(request, option_id):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
     return Response(status=status.HTTP_400_BAD_REQUEST)
+
+
+
+@api_view(['GET', 'POST'])
+def comentarios(request, question_id):
+    if request.method == 'GET':
+        question = Questao.objects.get(pk=question_id)
+        comentarios_list = question.comentario_set.all()
+        serializer = ComentarioSerializer(comentarios_list, many=True)
+        return Response(serializer.data)
+
+    elif request.method == 'POST':
+        serializer = ComentarioSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(status=status.HTTP_201_CREATED)
+
+    return Response(status=status.HTTP_400_BAD_REQUEST)
+
+
+@api_view(['PUT', 'DELETE'])
+def comentario_detail(request, comentario_id):
+    try:
+        comentario = Comentario.objects.get(pk=comentario_id)
+    except Comentario.DoesNotExist:
+        return Response(status=status.HTTP_404_NOT_FOUND)
+
+    if request.method == 'PUT':
+        serializer = ComentarioSerializer(comentario, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(status=status.HTTP_204_NO_CONTENT)
+
+    elif request.method == 'DELETE':
+        comentario.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+    return Response(status=status.HTTP_400_BAD_REQUEST)

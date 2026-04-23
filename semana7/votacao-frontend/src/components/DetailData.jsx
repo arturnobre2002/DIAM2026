@@ -2,7 +2,7 @@ import React from "react";
 import { Button, Form, FormGroup, Table } from "reactstrap";
 import moment from "moment";
 
-function DetailData({ options, question, toggle }) {
+function DetailData({ options, comentarios, question, toggle }) {
   // (1)
 
   const closeModal = (e) => {
@@ -42,6 +42,21 @@ function DetailData({ options, question, toggle }) {
             ))}
           </tbody>
         </Table>
+      </FormGroup>
+
+      <FormGroup>
+
+        <b>Comentários</b>
+            {comentarios.map((c) => (
+            <div key={c.id}>
+              <b>Autor:</b>
+              <p>{c.autor}</p>
+              <b>Comentário:</b>
+              <p>{c.comentario_texto}</p>
+            </div>
+          ))}
+
+
       </FormGroup>
 
       <Button type="submit">Fechar</Button>

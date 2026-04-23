@@ -6,8 +6,11 @@ import DetailData from "./DetailData";
 function DetailModal({ question }) {
   // (1)
   const URL_OPTIONS = "http://localhost:8000/votacao/api/options/"; // (2)
+  const URL_COMENTARIOS = "http://localhost:8000/votacao/api/comentarios/"; // (2)
+
   const [showModal, setShowModal] = useState(false); // (3)
   const [optionList, setOptionList] = useState([]); // (4)
+  const [comentariosList, setComentariosList]=useState([]);
 
   const getOptions = () => {
     // (5)
@@ -16,9 +19,20 @@ function DetailModal({ question }) {
     });
   };
 
+
+  const getComentarios = () => {
+    // (5)
+    axios.get(URL_COMENTARIOS + question.id).then((request) => {
+      setComentariosList(request.data);
+    });
+  };
+
   const toggleModal = () => {
     // (6)
-    if (!showModal) getOptions();
+    if (!showModal){
+      getOptions();
+      getComentarios();
+    }
     setShowModal((showModal) => !showModal);
   };
 
@@ -37,6 +51,7 @@ function DetailModal({ question }) {
 
         <ModalBody>
           <DetailData
+              comentarios={comentariosList}
             options={optionList}
             question={question}
             toggle={toggleModal}
