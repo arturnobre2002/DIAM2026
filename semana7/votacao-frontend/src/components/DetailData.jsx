@@ -46,15 +46,24 @@ function DetailData({ options, comentarios, question, toggle }) {
 
       <FormGroup>
 
-        <b>Comentários</b>
+        <Table>
+          <thead>
+            <tr>
+              <th style={{ textAlign: "left" }}>Autor</th>
+              <th style={{ textAlign: "right" }}>Comentário</th>
+            </tr>
+          </thead>
+
+          <tbody>
             {comentarios.map((c) => (
-            <div key={c.id}>
-              <b>Autor:</b>
-              <p>{c.autor}</p>
-              <b>Comentário:</b>
-              <p>{c.comentario_texto}</p>
-            </div>
-          ))}
+              // (5)
+              <tr key={c.id}>
+                <td style={{ textAlign: "left" }}>{c.autor}</td>
+                <td style={{ textAlign: "right" }}>{c.comentario_text}</td>
+              </tr>
+            ))}
+          </tbody>
+        </Table>
 
 
       </FormGroup>
