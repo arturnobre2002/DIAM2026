@@ -1,12 +1,15 @@
 import { useState } from "react";
-import { Button, Form, FormGroup, Table, Label } from "reactstrap";
+import { Button, Form, FormGroup, Table, Label, Input } from "reactstrap";
 import axios from "axios";
 import moment from "moment";
 
 function VoteForm({ options, question, toggle }) {
   const URL_OPTION = "http://localhost:8000/votacao/api/option/"; // (1)
+  const URL_COMENTARIOS="http://localhost:8000/votacao/api/comentarios/";
 
   const [selectedOption, setSelectedOption] = useState(-1); // (2)
+  const [autor, setAutor] = useState("");
+  const [comentarioTexto, setComentarioTexto] = useState("");
 
   const voteAndCloseModal = (event) => {
     // (3)
@@ -17,6 +20,16 @@ function VoteForm({ options, question, toggle }) {
       option.votos++;
 
       axios.put(URL_OPTION + option.id, option).then();
+    }
+
+    if (autor.trim() !== "" && comentarioTexto.trim() !== "") {
+      const novoComentario = {
+        questao: question.id,
+        autor: autor,
+        comentario_texto: comentarioTexto
+      };
+
+      axios.post(URL_COMENTARIOS + question.id, novoComentario).then();
     }
 
     toggle();
@@ -72,6 +85,29 @@ function VoteForm({ options, question, toggle }) {
             </tbody>
           </Table>
         </FormGroup>
+
+        <FormGroup>
+          <b>Comentar</b>
+          <br/>
+          <Label>Username:</Label>
+          <Input
+            type="text"
+            value={autor}
+            onChange={(e) => setAutor(e.target.value)}
+          />
+
+          <Label>Comentário:</Label>
+          <Input
+            type="text"
+            value={comentarioTexto}
+            onChange={(e) => setComentarioTexto(e.target.value)}
+          />
+
+
+
+        </FormGroup>
+
+
 
         <Button type="submit">Votar</Button>
         {/* (5) */}

@@ -49,7 +49,7 @@ function DetailData({ options, comentarios, question, toggle }) {
         <Table>
           <thead>
             <tr>
-              <th style={{ textAlign: "left" }}>Autor</th>
+              <th style={{ textAlign: "left" }}>Username</th>
               <th style={{ textAlign: "right" }}>Comentário</th>
             </tr>
           </thead>
@@ -59,7 +59,7 @@ function DetailData({ options, comentarios, question, toggle }) {
               // (5)
               <tr key={c.id}>
                 <td style={{ textAlign: "left" }}>{c.autor}</td>
-                <td style={{ textAlign: "right" }}>{c.comentario_text}</td>
+                <td style={{ textAlign: "right" }}>{c.comentario_texto}</td>
               </tr>
             ))}
           </tbody>
