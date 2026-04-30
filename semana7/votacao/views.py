@@ -22,12 +22,16 @@ def questions(request):
         return Response(status=status.HTTP_400_BAD_REQUEST)
 
 
-@api_view(['PUT', 'DELETE'])  # (2) e (4)
+@api_view(['GET', 'PUT', 'DELETE'])  # (2) e (4)
 def question_detail(request, question_id):
     try:
         question = Questao.objects.get(pk=question_id)
     except Questao.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
+
+    if request.method == 'GET':  
+        serializer = QuestaoSerializer(question)
+        return Response(serializer.data)
 
     if request.method == 'PUT':  # (4)
         serializer = QuestaoSerializer(question, data=request.data)
