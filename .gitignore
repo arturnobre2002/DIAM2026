@@ -4,3 +4,4 @@
 .idea/inspectionProfiles/profiles_settings.xml
 .idea/DIAM2026.iml
 __pycache__
+node_modules
